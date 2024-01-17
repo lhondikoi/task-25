@@ -47,7 +47,7 @@ app.get('/list', (req, res) => {
     } catch(e) {
         console.log(e)
         res.send({
-            "msg": "There was an error retriving the list of files."
+            "msg": "There was an error retrieving the list of files."
         })
     }
 })
