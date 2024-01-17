@@ -10,7 +10,19 @@ const timestamp_dir = "./timestamp-files/"
 const app = express()
 
 app.get('/', (req, res) => {
-    res.send("Hello, World!")
+    res.send({
+        msg: "Use the routes described below to access the different functionalities.",
+        routes: [
+            {
+                route: "/log",
+                functionality: "Creates a timestamp file."
+            },
+            {
+                route: "/list",
+                functionality: "Retrieves the list of timestamp files."
+            }
+        ]
+    })
 })
 
 app.get('/log', (req, res) => {
@@ -25,7 +37,6 @@ app.get('/log', (req, res) => {
 })
 
 app.get('/list', (req, res) => {
-    // const files = []
     try {
         fs.readdir(timestamp_dir, (err, files) => {
             res.send({
