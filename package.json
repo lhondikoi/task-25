@@ -1,0 +1,26 @@
+{
+  "name": "task-25",
+  "version": "1.0.0",
+  "description": "Guvi FSD Node.js task 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lhondikoi/task-25.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lhondikoi/task-25/issues"
+  },
+  "homepage": "https://github.com/lhondikoi/task-25#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
