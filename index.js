@@ -27,7 +27,11 @@ app.get('/', (req, res) => {
 
 app.get('/log', (req, res) => {
     try {
-        fs.writeFile(`./timestamp-files/${createTimestamp()}.txt`, "", (e)=>console.log(e))
+        fs.writeFile(`./timestamp-files/${createTimestamp()}.txt`, "", e => {
+            if (e) {
+                console.log(e)
+            }
+        })
         res.send("Successfully created timestamp.")
     } catch (e) {
         res.send({
